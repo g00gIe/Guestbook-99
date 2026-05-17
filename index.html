@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guestbook-99 | Webmaster Review Board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <div class="browser-bar">
+        <span>RetroBrowse 4.0</span>
+        <span>guestbook://webmaster/review-board</span>
+      </div>
+
+      <section class="window" aria-labelledby="challenge-title">
+        <header class="title-bar">
+          <span>Guestbook-99 :: Webmaster Review Board</span>
+          <div class="window-buttons" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </header>
+
+        <div class="window-body">
+          <marquee class="hero-marquee" behavior="alternate" scrollamount="5">
+            WELCOME SURFERS!!! SIGN THE GUESTBOOK AND IMPRESS THE WEBMASTER!!!
+          </marquee>
+
+          <table class="layout-table" role="presentation">
+            <tr>
+              <td class="sidebar-cell">
+                <aside class="sidebar">
+                  <div class="badge blink">NEW!</div>
+                  <nav class="nav-stack" aria-label="Site links">
+                    <a href="#">Home</a>
+                    <a href="#">MIDI Room</a>
+                    <a href="#">Links 2 Cool Sites</a>
+                    <a href="#">Guestbook</a>
+                    <a href="#">Email Webmaster</a>
+                  </nav>
+
+                  <div class="panel mini-panel">
+                    <p class="panel-label">Visitor Counter</p>
+                    <p class="counter" id="counter">00004199</p>
+                  </div>
+
+                  <div class="panel mini-panel">
+                    <p class="panel-label">Challenge Goal</p>
+                    <p class="small-copy">
+                      super easy challenge ;|
+                      
+                    </p>
+                  </div>
+                </aside>
+              </td>
+
+              <td class="content-cell">
+                <section class="content">
+                  <p class="eyebrow">Difficulty: Medium</p>
+                  <h1 id="challenge-title">The webmaster trusts a "legacy HTML cleaner."</h1>
+                  <p class="lead">
+                    This guestbook still supports old-school formatting tricks,
+                    and the admin preview renders submissions before they go
+                    live. Find a message that slips past the cleaner and makes
+                    the flag pop right into the page.
+                  </p>
+
+                  <div class="under-construction">
+                    <span class="stripe"></span>
+                    <span class="label">UNDER CONSTRUCTION</span>
+                    <span class="stripe"></span>
+                  </div>
+
+                  <div class="panel submit-panel">
+                    <h2>Sign My Guestbook</h2>
+                    <p class="small-copy">
+                      Allowed style tags: <code>[b]</code>, <code>[i]</code>,
+                      <code>[u]</code>, and classic HTML codes from the good old
+                      web.
+                    </p>
+
+                    <form id="guestbook-form" autocomplete="off">
+                      <label for="nickname">Nickname</label>
+                      <input
+                        id="nickname"
+                        name="nickname"
+                        type="text"
+                        maxlength="24"
+                        placeholder="CyberSkater99"
+                        required
+                      />
+
+                      <label for="message">Guestbook Message</label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="I LOVE THIS PAGE!!!"
+                        required
+                      ></textarea>
+
+                      <button type="submit">Preview For Webmaster</button>
+                    </form>
+                  </div>
+
+                  <div class="panel preview-panel">
+                    <div class="preview-header">
+                      <h2>Moderation Preview</h2>
+                      <span class="led" id="preview-led">WAITING</span>
+                    </div>
+
+                    <article class="guest-card" id="preview-card">
+                      <p class="guest-meta">
+                        Posted by <strong>Guest</strong> on <span id="post-date"></span>
+                      </p>
+                      <div class="guest-message" id="preview-message">
+                        The webmaster preview will appear here.
+                      </div>
+                    </article>
+
+                    <p class="status-line" id="status-line" aria-live="polite">
+                      Cleaner idle. Nothing suspicious yet.
+                    </p>
+                    <div class="flag-reveal" id="flag-reveal" hidden>
+                      <p class="panel-label">Flag Leak</p>
+                      <code id="flag-output">ACCESS DENIED</code>
+                    </div>
+                  </div>
+                </section>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="_script.js"></script>
+  </body>
+</html>
